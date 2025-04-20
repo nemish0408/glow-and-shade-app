@@ -25,12 +25,12 @@ export const Navbar: React.FC = () => {
                 <ul className="grid w-[200px] gap-3 p-4">
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link to="/products/software" className="block">Software</Link>
+                      <Link to="/products/biomedical-equipment" className="block">Biomedical Equipment</Link>
                     </NavigationMenuLink>
                   </li>
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link to="/products/hardware" className="block">Hardware</Link>
+                      <Link to="/products/surgical-accessories" className="block">Surgical Accessories</Link>
                     </NavigationMenuLink>
                   </li>
                 </ul>
@@ -42,12 +42,12 @@ export const Navbar: React.FC = () => {
                 <ul className="grid w-[200px] gap-3 p-4">
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link to="/services/consulting" className="block">Consulting</Link>
+                      <Link to="/services/calibration" className="block">Calibration & Maintenance</Link>
                     </NavigationMenuLink>
                   </li>
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link to="/services/support" className="block">Support</Link>
+                      <Link to="/services/outsourcing" className="block">Outsourcing Solutions</Link>
                     </NavigationMenuLink>
                   </li>
                 </ul>
@@ -55,7 +55,7 @@ export const Navbar: React.FC = () => {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
-                <Link to="/about" className="px-4 py-2 hover:bg-accent rounded-md">About</Link>
+                <Link to="/contact" className="px-4 py-2 hover:bg-accent rounded-md">Contact</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
@@ -67,3 +67,5 @@ export const Navbar: React.FC = () => {
     </nav>
   );
 };
+
+export default Navbar;

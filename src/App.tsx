@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -14,6 +13,11 @@ import Hardware from "./pages/products/Hardware";
 import Consulting from "./pages/services/Consulting";
 import Support from "./pages/services/Support";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
+import BiomecicalEquipment from "./pages/products/BiomecicalEquipment";
+import SurgicalAccessories from "./pages/products/SurgicalAccessories";
+import Calibration from "./pages/services/Calibration";
+import Outsourcing from "./pages/services/Outsourcing";
 
 const queryClient = new QueryClient();
 
@@ -26,16 +30,17 @@ const App = () => (
         <Navbar />
         <Routes>
           <Route path="/" element={<Index />} />
+          
           {/* Product Routes */}
-          <Route path="/products/software" element={<Software />} />
-          <Route path="/products/hardware" element={<Hardware />} />
+          <Route path="/products/biomedical-equipment" element={<BiomecicalEquipment />} />
+          <Route path="/products/surgical-accessories" element={<SurgicalAccessories />} />
           
           {/* Service Routes */}
-          <Route path="/services/consulting" element={<Consulting />} />
-          <Route path="/services/support" element={<Support />} />
+          <Route path="/services/calibration" element={<Calibration />} />
+          <Route path="/services/outsourcing" element={<Outsourcing />} />
           
-          {/* About Route */}
-          <Route path="/about" element={<About />} />
+          {/* Contact Route */}
+          <Route path="/contact" element={<Contact />} />
           
           <Route path="*" element={<NotFound />} />
         </Routes>
