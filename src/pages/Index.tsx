@@ -1,32 +1,31 @@
-
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { microscope, scissors, settings, handshake } from "lucide-react";
+import { Microscope, Scissors, Settings, Handshake } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
   const services = [
     {
-      icon: microscope,
+      icon: Microscope,
       title: "Biomedical Equipment",
       description: "State-of-the-art biomedical devices and equipment for healthcare facilities",
       link: "/products/biomedical"
     },
     {
-      icon: scissors,
+      icon: Scissors,
       title: "Surgical Accessories",
       description: "High-quality surgical accessories and instruments",
       link: "/products/surgical"
     },
     {
-      icon: settings,
+      icon: Settings,
       title: "Calibration Services",
       description: "Professional calibration and maintenance services for medical equipment",
       link: "/services/calibration"
     },
     {
-      icon: handshake,
+      icon: Handshake,
       title: "Outsourcing Solutions",
       description: "Comprehensive biomedical engineering outsourcing solutions",
       link: "/services/outsourcing"
