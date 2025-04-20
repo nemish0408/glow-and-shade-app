@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { MENU_ITEMS } from "@/config/menu";
 import { Separator } from "@/components/ui/separator";
 
-const Footer = () => {
+export const Footer = () => {
   const socialLinks = [
     {
       icon: Facebook,
@@ -95,5 +95,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;
