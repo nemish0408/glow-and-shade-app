@@ -1,9 +1,9 @@
-
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Microscope, Scissors, Settings, Handshake, Medical, Syringe } from "lucide-react";
+import { Microscope, Scissors, Settings, Handshake } from "lucide-react";
 import { Link } from "react-router-dom";
+import { GoToTop } from "@/components/GoToTop";
 
 const Index = () => {
   const services = [
@@ -143,6 +143,8 @@ const Index = () => {
           </Button>
         </div>
       </section>
+
+      <GoToTop />
     </div>
   );
 };
