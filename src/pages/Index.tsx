@@ -1,7 +1,8 @@
+
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Microscope, Scissors, Settings, Handshake } from "lucide-react";
+import { Microscope, Scissors, Settings, Handshake, Medical, Syringe } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -35,20 +36,22 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative py-20 px-6">
+      <section className="relative py-20 px-6 bg-muted/10">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Advanced Medical Equipment Solutions
+            Comprehensive Medical Solutions
           </h1>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Your trusted partner in biomedical equipment, surgical accessories, and professional healthcare services.
+          <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
+            Specialized in advanced calibration services and cutting-edge medical equipment. 
+            We provide precision instrument calibration, state-of-the-art medical devices, 
+            and comprehensive healthcare technology solutions.
           </p>
           <div className="flex gap-4 justify-center">
             <Button asChild>
-              <Link to="/products/biomedical-equipment">Explore Products</Link>
+              <Link to="/services/calibration">Calibration Services</Link>
             </Button>
             <Button variant="outline" asChild>
-              <Link to="/contact">Contact Us</Link>
+              <Link to="/products/biomedical-equipment">Medical Equipment</Link>
             </Button>
           </div>
         </div>
