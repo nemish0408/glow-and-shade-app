@@ -10,13 +10,13 @@ const Index = () => {
       icon: Microscope,
       title: "Biomedical Equipment",
       description: "State-of-the-art biomedical devices and equipment for healthcare facilities",
-      link: "/products/biomedical"
+      link: "/products/biomedical-equipment"
     },
     {
       icon: Scissors,
       title: "Surgical Accessories",
       description: "High-quality surgical accessories and instruments",
-      link: "/products/surgical"
+      link: "/products/surgical-accessories"
     },
     {
       icon: Settings,
@@ -45,7 +45,7 @@ const Index = () => {
           </p>
           <div className="flex gap-4 justify-center">
             <Button asChild>
-              <Link to="/products/biomedical">Explore Products</Link>
+              <Link to="/products/biomedical-equipment">Explore Products</Link>
             </Button>
             <Button variant="outline" asChild>
               <Link to="/contact">Contact Us</Link>
