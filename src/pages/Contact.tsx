@@ -7,10 +7,14 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Phone } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Invalid email address"),
+  phone: z.string().min(10, "Phone number must be at least 10 digits"),
+  service: z.string().min(1, "Please select a service"),
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
@@ -20,6 +24,8 @@ const Contact = () => {
     defaultValues: {
       name: "",
       email: "",
+      phone: "",
+      service: "",
       message: "",
     },
   });
@@ -61,6 +67,48 @@ const Contact = () => {
                 <FormControl>
                   <Input placeholder="your.email@example.com" type="email" {...field} />
                 </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="phone"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Phone Number</FormLabel>
+                <FormControl>
+                  <div className="relative">
+                    <Phone className="absolute left-3 top-2.5 h-5 w-5 text-muted-foreground" />
+                    <Input placeholder="Your phone number" type="tel" className="pl-10" {...field} />
+                  </div>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="service"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Service Required</FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select a service" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="calibration">Calibration Services</SelectItem>
+                    <SelectItem value="biomedical">Biomedical Equipment</SelectItem>
+                    <SelectItem value="surgical">Surgical Accessories</SelectItem>
+                    <SelectItem value="outsourcing">Outsourcing Services</SelectItem>
+                    <SelectItem value="other">Other</SelectItem>
+                  </SelectContent>
+                </Select>
                 <FormMessage />
               </FormItem>
             )}
