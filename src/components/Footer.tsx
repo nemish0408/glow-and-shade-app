@@ -1,4 +1,3 @@
-
 import { Facebook, Instagram, Linkedin, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { MENU_ITEMS } from "@/config/menu";
@@ -22,6 +21,14 @@ export const Footer = () => {
       label: "LinkedIn"
     }
   ];
+
+  const companyAddress = {
+    street: "123 Medical Center Drive",
+    city: "City",
+    state: "State",
+    zipCode: "12345",
+    mapsLink: "https://maps.google.com/maps?q=123+Medical+Center+Drive"
+  };
 
   return (
     <footer className="bg-muted/50 mt-20">
@@ -57,11 +64,15 @@ export const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Location</h3>
             <div className="flex items-start gap-2 text-muted-foreground">
               <MapPin className="mt-1 h-5 w-5" />
-              <p>
-                123 Medical Center Drive<br />
-                Healthcare District<br />
-                City, State 12345
-              </p>
+              <a 
+                href={companyAddress.mapsLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors"
+              >
+                {companyAddress.street}<br />
+                {companyAddress.city}, {companyAddress.state} {companyAddress.zipCode}
+              </a>
             </div>
           </div>
 
