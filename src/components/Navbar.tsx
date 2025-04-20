@@ -2,6 +2,7 @@
 import React from 'react';
 import { Logo } from './Logo';
 import { ThemeToggle } from './theme/ThemeToggle';
+import { MENU_ITEMS } from '@/config/menu';
 import { 
   NavigationMenu, 
   NavigationMenuList, 
@@ -19,45 +20,34 @@ export const Navbar: React.FC = () => {
         <Logo />
         <NavigationMenu>
           <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>Products</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[200px] gap-3 p-4">
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link to="/products/biomedical-equipment" className="block">Biomedical Equipment</Link>
-                    </NavigationMenuLink>
-                  </li>
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link to="/products/surgical-accessories" className="block">Surgical Accessories</Link>
-                    </NavigationMenuLink>
-                  </li>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[200px] gap-3 p-4">
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link to="/services/calibration" className="block">Calibration & Maintenance</Link>
-                    </NavigationMenuLink>
-                  </li>
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link to="/services/outsourcing" className="block">Outsourcing Solutions</Link>
-                    </NavigationMenuLink>
-                  </li>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild>
-                <Link to="/contact" className="px-4 py-2 hover:bg-accent rounded-md">Contact</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
+            {MENU_ITEMS.map((item) => (
+              <NavigationMenuItem key={item.title}>
+                {item.subMenu ? (
+                  <>
+                    <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <ul className="grid w-[200px] gap-3 p-4">
+                        {item.subMenu.map((subItem) => (
+                          <li key={subItem.title}>
+                            <NavigationMenuLink asChild>
+                              <Link to={subItem.href} className="block px-4 py-2 hover:bg-accent rounded-md">
+                                {subItem.title}
+                              </Link>
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </NavigationMenuContent>
+                  </>
+                ) : (
+                  <NavigationMenuLink asChild>
+                    <Link to={item.href} className="px-4 py-2 hover:bg-accent rounded-md">
+                      {item.title}
+                    </Link>
+                  </NavigationMenuLink>
+                )}
+              </NavigationMenuItem>
+            ))}
           </NavigationMenuList>
         </NavigationMenu>
       </div>
