@@ -16,9 +16,14 @@ export const Logo: React.FC<LogoProps> = ({ className }) => {
           alt="Dabhi Meditech Solutions Logo" 
           className="h-10 w-10 object-contain"
         />
-        <span className="font-bold text-xl text-sky-500">
-          Dabhi Meditech Solutions
-        </span>
+        <div className="flex flex-col">
+          <span className="font-bold text-xl text-sky-500 leading-tight">
+            Dabhi Meditech
+          </span>
+          <span className="font-bold text-xl text-sky-500 leading-tight">
+            Solutions
+          </span>
+        </div>
       </div>
     </Link>
   );
