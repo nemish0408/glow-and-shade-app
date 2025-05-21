@@ -16,21 +16,21 @@ const Index = () => {
       description: "State-of-the-art biomedical devices and equipment for healthcare facilities",
       image: "https://images.unsplash.com/photo-1583911860205-72f8ac8ddcbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
       buttonText: "Explore Products",
-      buttonLink: "/products/biomedical-equipment"
+      buttonLink: "/products/biomedical-equipments"
     },
     {
       title: "Professional Calibration Services",
       description: "Ensure accuracy and reliability with our precision calibration services",
       image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
       buttonText: "Learn More",
-      buttonLink: "/services/calibration"
+      buttonLink: "/services/calibration-services"
     },
     {
       title: "Healthcare Solutions",
       description: "Comprehensive medical technology solutions for modern healthcare providers",
       image: "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
       buttonText: "Our Services",
-      buttonLink: "/services/outsourcing"
+      buttonLink: "/services/outsourcing-solutions"
     }
   ];
 
@@ -58,13 +58,13 @@ const Index = () => {
       icon: Settings,
       title: "Calibration Services",
       description: "Professional calibration and maintenance services for medical equipment",
-      link: "/services/calibration"
+      link: "/services/calibration-services"
     },
     {
       icon: Handshake,
       title: "Outsourcing Solutions",
       description: "Comprehensive biomedical engineering outsourcing solutions",
-      link: "/services/outsourcing"
+      link: "/services/outsourcing-solutions"
     }
   ];
 
