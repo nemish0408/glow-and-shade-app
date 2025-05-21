@@ -23,14 +23,14 @@ const Index = () => {
       description: "Ensure accuracy and reliability with our precision calibration services",
       image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
       buttonText: "Learn More",
-      buttonLink: "/calibration-service"
+      buttonLink: "/services/calibration"
     },
     {
       title: "Healthcare Solutions",
       description: "Comprehensive medical technology solutions for modern healthcare providers",
       image: "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
       buttonText: "Our Services",
-      buttonLink: "/outsourcing-service"
+      buttonLink: "/services/outsourcing"
     }
   ];
 
