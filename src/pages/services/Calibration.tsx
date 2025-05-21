@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -6,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Microscope, TestTube, TestTubes, FlaskConical } from "lucide-react";
+import { Microscope, TestTube, TestTubes, FlaskConical, Download } from "lucide-react";
 
 const Calibration = () => {
   const calibrationServices = [
@@ -55,6 +54,17 @@ const Calibration = () => {
     }
   ];
 
+  const handleDownloadBrochure = () => {
+    // Create a link to download the file
+    const link = document.createElement('a');
+    link.href = 'https://www.flukebiomedical.com/sites/default/files/fluke-biomedical-product-catalog-w_0.pdf';
+    link.target = '_blank';
+    link.download = 'fluke-biomedical-product-catalog.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -93,7 +103,8 @@ const Calibration = () => {
                 <Button size="lg" asChild>
                   <Link to="/contact">Request Calibration</Link>
                 </Button>
-                <Button variant="outline" size="lg">
+                <Button variant="outline" size="lg" onClick={handleDownloadBrochure} className="gap-2">
+                  <Download size={18} />
                   Download Brochure
                 </Button>
               </div>
