@@ -88,7 +88,7 @@ const Calibration = () => {
       </section>
 
       {/* Introduction */}
-      <section className="py-12 px-6">
+      <section className="py-12 lg:px-6">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
@@ -123,7 +123,7 @@ const Calibration = () => {
       </section>
 
       {/* Our Calibration Equipment */}
-      <section className="py-12 px-6 bg-muted/50">
+      <section className="py-12 lg:px-6 bg-muted/50">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold">Industry-Leading Calibration Equipment</h2>
@@ -246,7 +246,7 @@ const Calibration = () => {
       </section>
 
       {/* Our Calibration Services */}
-      <section className="py-12 px-6">
+      <section className="py-12 lg:px-6">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold">Our Calibration Services</h2>
@@ -283,7 +283,7 @@ const Calibration = () => {
       </section>
 
       {/* Clinical Validation Section */}
-      <section className="py-12 px-6 bg-muted/50">
+      <section className="py-12 lg:px-6 bg-muted/50">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="grid grid-cols-2 gap-4">
@@ -362,7 +362,7 @@ const Calibration = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-12 px-6 bg-muted/50">
+      <section className="py-12 lg:px-6 bg-muted/50">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold">Our Calibration Process</h2>
@@ -418,7 +418,7 @@ const Calibration = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-12 px-6">
+      <section className="py-12 lg:px-6">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold">Frequently Asked Questions</h2>
@@ -440,7 +440,7 @@ const Calibration = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 px-6 bg-muted/50 ">
+      <section className="py-16 lg:px-6 bg-muted/50 ">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 ">Ensure Accuracy and Safety with Professional Calibration</h2>
           <p className="mb-8 max-w-2xl mx-auto ">

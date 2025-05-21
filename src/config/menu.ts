@@ -24,11 +24,11 @@ export const MENU_ITEMS = [
     subMenu: [
       { 
         title: 'Calibration', 
-        href: '/calibration-service' 
+        href: '/services/calibration' 
       },
       { 
         title: 'Outsourcing', 
-        href: '/outsourcing-service' 
+        href: '/services/outsourcing' 
       }
     ]
   },

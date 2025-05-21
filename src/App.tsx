@@ -40,8 +40,9 @@ const App = () => (
               <Route path="/products/surgical-accessories" element={<SurgicalAccessories />} />
               
               {/* Service Routes */}
-              <Route path="/calibration-service" element={<Calibration />} />
-              <Route path="/outsourcing-service" element={<Outsourcing />} />
+              <Route path="/services/calibration" element={<Calibration />} />
+              <Route path="/services/outsourcing" element={<Outsourcing />} />
+              
               
               {/* Contact Route */}
               <Route path="/contact" element={<Contact />} />
