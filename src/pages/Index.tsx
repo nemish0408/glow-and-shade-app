@@ -15,21 +15,21 @@ const Index = () => {
       title: "Advanced Medical Equipment",
       description: "State-of-the-art biomedical devices and equipment for healthcare facilities",
       image: "https://images.unsplash.com/photo-1583911860205-72f8ac8ddcbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-      buttonText: "Explore Products",
+      buttonText: "Explore BioMedical Products",
       buttonLink: "/products/biomedical-equipments"
     },
     {
       title: "Professional Calibration Services",
       description: "Ensure accuracy and reliability with our precision calibration services",
       image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-      buttonText: "Learn More",
+      buttonText: "Calibration Services",
       buttonLink: "/services/calibration-services"
     },
     {
       title: "Healthcare Solutions",
       description: "Comprehensive medical technology solutions for modern healthcare providers",
       image: "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-      buttonText: "Our Services",
+      buttonText: "Outsourcing Services",
       buttonLink: "/services/outsourcing-solutions"
     }
   ];
