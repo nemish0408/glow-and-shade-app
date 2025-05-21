@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -93,14 +92,14 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section with Sliding Carousel */}
+      {/* Hero Section with Sliding Carousel - Fixed color contrast */}
       <section className="relative h-[60vh] md:h-[70vh] overflow-hidden">
         {heroSlides.map((slide, index) => (
           <div 
             key={index} 
             className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
           >
-            <div className="absolute inset-0 bg-black/50 z-10" />
+            <div className="absolute inset-0 bg-black/60 z-10" />
             <img 
               src={slide.image} 
               alt={slide.title} 
@@ -108,13 +107,13 @@ const Index = () => {
             />
             <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center p-6">
               <div className="max-w-3xl mx-auto">
-                <h1 className="text-3xl md:text-5xl font-bold mb-4 text-white">
+                <h1 className="text-3xl md:text-5xl font-bold mb-4 text-white shadow-text">
                   {slide.title}
                 </h1>
-                <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl mx-auto">
+                <p className="text-lg md:text-xl text-white mb-6 max-w-2xl mx-auto shadow-text">
                   {slide.description}
                 </p>
-                <Button asChild size="lg" className="mt-4">
+                <Button asChild size="lg" className="mt-4 bg-primary hover:bg-primary/90">
                   <Link to={slide.buttonLink}>
                     {slide.buttonText} <ChevronRight className="ml-1 h-4 w-4" />
                   </Link>
@@ -326,18 +325,18 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16 px-6 bg-primary text-primary-foreground">
+      {/* Call to Action - Fixed color contrast issues */}
+      <section className="py-16 px-6 bg-primary">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Upgrade Your Medical Facility?</h2>
-          <p className="mb-8 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6 text-white">Ready to Upgrade Your Medical Facility?</h2>
+          <p className="mb-8 max-w-2xl mx-auto text-white/90">
             Contact us today to discuss your medical equipment needs and discover how we can help enhance your healthcare services.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button variant="secondary" size="lg" asChild>
+            <Button variant="secondary" size="lg" asChild className="text-primary bg-white hover:bg-white/90">
               <Link to="/contact">Get in Touch</Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10" asChild>
+            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10" asChild>
               <Link to="/products/biomedical-equipment">Browse Products</Link>
             </Button>
           </div>
