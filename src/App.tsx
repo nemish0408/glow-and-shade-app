@@ -19,6 +19,7 @@ import BiomecicalEquipment from "./pages/products/BiomecicalEquipment";
 import SurgicalAccessories from "./pages/products/SurgicalAccessories";
 import Calibration from "./pages/services/Calibration";
 import Outsourcing from "./pages/services/Outsourcing";
+import { GoToTop } from "./components/GoToTop";
 
 const queryClient = new QueryClient();
 
@@ -39,8 +40,8 @@ const App = () => (
               <Route path="/products/surgical-accessories" element={<SurgicalAccessories />} />
               
               {/* Service Routes */}
-              <Route path="/services/calibration" element={<Calibration />} />
-              <Route path="/services/outsourcing" element={<Outsourcing />} />
+              <Route path="/calibration-service" element={<Calibration />} />
+              <Route path="/outsourcing-service" element={<Outsourcing />} />
               
               {/* Contact Route */}
               <Route path="/contact" element={<Contact />} />
@@ -49,6 +50,7 @@ const App = () => (
             </Routes>
           </main>
           <Footer />
+          <GoToTop/>
         </div>
       </BrowserRouter>
     </TooltipProvider>

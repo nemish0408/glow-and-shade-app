@@ -13,25 +13,25 @@ const Calibration = () => {
       title: "Patient Monitors",
       description: "ECG, blood pressure, pulse oximetry, and vital signs monitors calibration",
       icon: TestTube,
-      image: "/lovable-uploads/e953b46b-2063-42d5-8fef-bbdc08b8b875.png",
+      image: "/lovable-uploads/maxresdefault (1).jpg",
     },
     {
       title: "Imaging Equipment",
       description: "Ultrasound, X-ray, CT scanners calibration and performance testing",
       icon: Microscope,
-      image: "/lovable-uploads/09cf9294-1f8f-4e40-aade-ab0ee2c8fe16.png",
+      image: "/lovable-uploads/F-tis75plus_22a_c.webp",
     },
     {
       title: "Laboratory Equipment",
       description: "Centrifuges, spectrophotometers, and analyzers calibration",
       icon: TestTubes,
-      image: "/lovable-uploads/4d439193-e6be-4033-a1dc-d82fcb409144.png",
+      image: "/lovable-uploads/cegroup_2271a_fluke2.jpg",
     },
     {
       title: "Therapeutic Equipment",
       description: "Defibrillators, infusion pumps, ventilators calibration",
       icon: FlaskConical,
-      image: "/lovable-uploads/469bc209-7388-4a64-924f-685f90017724.png",
+      image: "/lovable-uploads/maxresdefault (2).jpg",
     }
   ];
 
@@ -71,7 +71,7 @@ const Calibration = () => {
       <section className="relative h-[40vh] md:h-[50vh] overflow-hidden">
         <div className="absolute inset-0 bg-black/75 z-10" />
         <img 
-          src="/lovable-uploads/469bc209-7388-4a64-924f-685f90017724.png" 
+          src="/lovable-uploads/F-714b_04b_2_1500x1000_0.webp" 
           alt="Fluke Calibrator in Use" 
           className="w-full h-full object-cover"
         />
@@ -112,7 +112,7 @@ const Calibration = () => {
             <div className="rounded-lg overflow-hidden shadow-lg">
               <AspectRatio ratio={4/3}>
                 <img 
-                  src="/lovable-uploads/469bc209-7388-4a64-924f-685f90017724.png" 
+                  src="/lovable-uploads/Fc-5560a_27a_c.webp" 
                   alt="Fluke Process Calibrator" 
                   className="w-full h-full object-cover"
                 />
@@ -143,10 +143,11 @@ const Calibration = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="rounded-lg overflow-hidden">
                   <img 
-                    src="/lovable-uploads/e953b46b-2063-42d5-8fef-bbdc08b8b875.png" 
-                    alt="Fluke Patient Monitor Calibrator" 
+                    src="/lovable-uploads/09cf9294-1f8f-4e40-aade-ab0ee2c8fe16.png" 
+                    alt="Fluke Imaging Calibrator" 
                     className="w-full h-64 object-cover"
                   />
+                  
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-3">Patient Monitor Calibration</h3>
@@ -167,9 +168,9 @@ const Calibration = () => {
             <TabsContent value="imaging" className="mt-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="rounded-lg overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/09cf9294-1f8f-4e40-aade-ab0ee2c8fe16.png" 
-                    alt="Fluke Imaging Calibrator" 
+                      <img 
+                    src="/lovable-uploads/469bc209-7388-4a64-924f-685f90017724.png" 
+                    alt="Fluke Therapeutic Equipment Calibrator" 
                     className="w-full h-64 object-cover"
                   />
                 </div>
@@ -217,9 +218,10 @@ const Calibration = () => {
             <TabsContent value="therapeutic" className="mt-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="rounded-lg overflow-hidden">
+              
                   <img 
-                    src="/lovable-uploads/469bc209-7388-4a64-924f-685f90017724.png" 
-                    alt="Fluke Therapeutic Equipment Calibrator" 
+                    src="/lovable-uploads/fb-impulse7000dp_12a_c.jpg" 
+                    alt="Fluke Patient Monitor Calibrator" 
                     className="w-full h-64 object-cover"
                   />
                 </div>
@@ -281,34 +283,34 @@ const Calibration = () => {
       </section>
 
       {/* Clinical Validation Section */}
-      <section className="py-12 px-6 bg-[#f0f5ff]">
+      <section className="py-12 px-6 bg-muted/50">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="grid grid-cols-2 gap-4">
               <div className="rounded-lg overflow-hidden">
                 <img 
-                  src="/lovable-uploads/469bc209-7388-4a64-924f-685f90017724.png"
+                  src="/lovable-uploads/toc-ptools-content-f-754-31a-1500x1000.jpg"
                   alt="Process Calibration" 
                   className="w-full h-48 object-cover"
                 />
               </div>
               <div className="rounded-lg overflow-hidden">
                 <img 
-                  src="/lovable-uploads/09cf9294-1f8f-4e40-aade-ab0ee2c8fe16.png"
+                  src="/lovable-uploads/fluke-calibration.jpg"
                   alt="Medical Equipment Calibration" 
                   className="w-full h-48 object-cover"
                 />
               </div>
               <div className="rounded-lg overflow-hidden">
                 <img 
-                  src="/lovable-uploads/e953b46b-2063-42d5-8fef-bbdc08b8b875.png"
+                  src="/lovable-uploads/fb-impulse7000dp-esa620_02a_c_0.jpg"
                   alt="Patient Monitor Calibration" 
                   className="w-full h-48 object-cover"
                 />
               </div>
               <div className="rounded-lg overflow-hidden">
                 <img 
-                  src="/lovable-uploads/4d439193-e6be-4033-a1dc-d82fcb409144.png"
+                  src="/lovable-uploads/calibration-of-medical-equipment.jpg"
                   alt="Laboratory Equipment Calibration" 
                   className="w-full h-48 object-cover"
                 />
@@ -438,17 +440,17 @@ const Calibration = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 px-6 bg-[#0a0f1d] text-white">
+      <section className="py-16 px-6 bg-muted/50 ">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 text-white">Ensure Accuracy and Safety with Professional Calibration</h2>
-          <p className="mb-8 max-w-2xl mx-auto text-white/90">
+          <h2 className="text-3xl font-bold mb-6 ">Ensure Accuracy and Safety with Professional Calibration</h2>
+          <p className="mb-8 max-w-2xl mx-auto ">
             Contact us today to schedule a calibration service for your medical equipment and ensure compliance with regulatory standards.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button variant="secondary" size="lg" asChild className="bg-white text-[#0a0f1d] hover:bg-white/90">
+            <Button variant="secondary" size="lg" asChild className="bg-black dark:bg-white text-white dark:text-black dark:hover:bg-white/50 hover:text-white hover:bg-gray-700">
               <Link to="/contact">Schedule Calibration</Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10" asChild>
+            <Button variant="outline" size="lg" className="border-black dark:border-white  hover:bg-black/50 hover:text-white dark:hover:bg-white/10" asChild>
               <Link to="/services/outsourcing">Explore Other Services</Link>
             </Button>
           </div>

@@ -23,14 +23,14 @@ const Index = () => {
       description: "Ensure accuracy and reliability with our precision calibration services",
       image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
       buttonText: "Learn More",
-      buttonLink: "/services/calibration"
+      buttonLink: "/calibration-service"
     },
     {
       title: "Healthcare Solutions",
       description: "Comprehensive medical technology solutions for modern healthcare providers",
       image: "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
       buttonText: "Our Services",
-      buttonLink: "/services/outsourcing"
+      buttonLink: "/outsourcing-service"
     }
   ];
 
@@ -115,7 +115,7 @@ const Index = () => {
                 <p className="text-lg md:text-xl text-white mb-6 max-w-2xl mx-auto shadow-text">
                   {slide.description}
                 </p>
-                <Button asChild size="lg" className="mt-4 bg-white text-primary hover:bg-white/90">
+                <Button asChild size="lg" className="mt-4 bg-white text-black hover:bg-white/90">
                   <Link to={slide.buttonLink}>
                     {slide.buttonText} <ChevronRight className="ml-1 h-4 w-4" />
                   </Link>
@@ -139,14 +139,14 @@ const Index = () => {
       </section>
 
       {/* Quick Info Section */}
-      <section className="py-8 bg-primary text-primary-foreground">
+      <section className="py-8  bg-muted/50 text-primary">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div className="p-4">
               <h3 className="text-xl font-bold mb-2">Premium Equipment</h3>
               <p>High-quality medical equipment from trusted manufacturers</p>
             </div>
-            <div className="p-4 border-y md:border-y-0 md:border-x border-primary-foreground/20">
+            <div className="p-4 border-y md:border-y-0 md:border-x border-primary/20">
               <h3 className="text-xl font-bold mb-2">Expert Service</h3>
               <p>Professional calibration and maintenance by certified technicians</p>
             </div>
@@ -328,17 +328,17 @@ const Index = () => {
       </section>
 
       {/* Call to Action - Fixed color contrast issues */}
-      <section className="py-16 px-6 bg-[#0a0f1d] text-white">
+      <section className="py-16 px-6 ">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 text-white">Ready to Upgrade Your Medical Facility?</h2>
-          <p className="mb-8 max-w-2xl mx-auto text-white/90">
+          <h2 className="text-3xl font-bold mb-6 ">Ready to Upgrade Your Medical Facility?</h2>
+          <p className="mb-8 max-w-2xl mx-auto ">
             Contact us today to discuss your medical equipment needs and discover how we can help enhance your healthcare services.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button variant="secondary" size="lg" asChild className="bg-white text-[#0a0f1d] hover:bg-white/90">
+            <Button variant="secondary" size="lg" asChild className="bg-black dark:bg-white text-white dark:text-black dark:hover:bg-white/50 hover:text-white hover:bg-gray-700">
               <Link to="/contact">Get in Touch</Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10" asChild>
+            <Button variant="outline" size="lg" className="border-black dark:border-white  hover:bg-black/50 hover:text-white dark:hover:bg-white/10" asChild>
               <Link to="/products/biomedical-equipment">Browse Products</Link>
             </Button>
           </div>
