@@ -9,18 +9,28 @@ export const MENU_ITEMS = [
     href: '/products',
     subMenu: [
       { 
-        title: 'Biomedical', 
-        href: '/products/biomedical' 
+        title: 'Biomedical Equipment', 
+        href: '/products/biomedical-equipment' 
       },
       { 
-        title: 'Surgical', 
-        href: '/products/surgical' 
+        title: 'Surgical Accessories', 
+        href: '/products/surgical-accessories' 
       }
     ]
   },
   { 
     title: 'Services', 
-    href: '/services' 
+    href: '/services',
+    subMenu: [
+      { 
+        title: 'Calibration', 
+        href: '/services/calibration' 
+      },
+      { 
+        title: 'Outsourcing', 
+        href: '/services/outsourcing' 
+      }
+    ]
   },
   { 
     title: 'About', 
