@@ -14,21 +14,25 @@ const Calibration = () => {
       title: "Patient Monitors",
       description: "ECG, blood pressure, pulse oximetry, and vital signs monitors calibration",
       icon: TestTube,
+      image: "/lovable-uploads/e953b46b-2063-42d5-8fef-bbdc08b8b875.png",
     },
     {
       title: "Imaging Equipment",
       description: "Ultrasound, X-ray, CT scanners calibration and performance testing",
       icon: Microscope,
+      image: "/lovable-uploads/09cf9294-1f8f-4e40-aade-ab0ee2c8fe16.png",
     },
     {
       title: "Laboratory Equipment",
       description: "Centrifuges, spectrophotometers, and analyzers calibration",
       icon: TestTubes,
+      image: "/lovable-uploads/4d439193-e6be-4033-a1dc-d82fcb409144.png",
     },
     {
       title: "Therapeutic Equipment",
       description: "Defibrillators, infusion pumps, ventilators calibration",
       icon: FlaskConical,
+      image: "/lovable-uploads/469bc209-7388-4a64-924f-685f90017724.png",
     }
   ];
 
@@ -57,8 +61,8 @@ const Calibration = () => {
       <section className="relative h-[40vh] md:h-[50vh] overflow-hidden">
         <div className="absolute inset-0 bg-black/75 z-10" />
         <img 
-          src="https://images.unsplash.com/photo-1518770660439-4636190af475" 
-          alt="Calibration Equipment" 
+          src="/lovable-uploads/469bc209-7388-4a64-924f-685f90017724.png" 
+          alt="Fluke Calibrator in Use" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center p-6">
@@ -97,8 +101,8 @@ const Calibration = () => {
             <div className="rounded-lg overflow-hidden shadow-lg">
               <AspectRatio ratio={4/3}>
                 <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
-                  alt="Fluke Calibrator" 
+                  src="/lovable-uploads/469bc209-7388-4a64-924f-685f90017724.png" 
+                  alt="Fluke Process Calibrator" 
                   className="w-full h-full object-cover"
                 />
               </AspectRatio>
@@ -128,7 +132,7 @@ const Calibration = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="rounded-lg overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88" 
+                    src="/lovable-uploads/e953b46b-2063-42d5-8fef-bbdc08b8b875.png" 
                     alt="Fluke Patient Monitor Calibrator" 
                     className="w-full h-64 object-cover"
                   />
@@ -144,6 +148,7 @@ const Calibration = () => {
                     <li>Pulse oximeters (SpO2)</li>
                     <li>Cardiac output monitors</li>
                     <li>Temperature sensors and monitors</li>
+                    <li>Defibrillator analyzers and testers</li>
                   </ul>
                 </div>
               </div>
@@ -152,7 +157,7 @@ const Calibration = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="rounded-lg overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1516199423456-1f1e91b06f86" 
+                    src="/lovable-uploads/09cf9294-1f8f-4e40-aade-ab0ee2c8fe16.png" 
                     alt="Fluke Imaging Calibrator" 
                     className="w-full h-64 object-cover"
                   />
@@ -168,6 +173,7 @@ const Calibration = () => {
                     <li>Ultrasound systems</li>
                     <li>MRI systems</li>
                     <li>DICOM display monitors</li>
+                    <li>Radiography quality assurance equipment</li>
                   </ul>
                 </div>
               </div>
@@ -176,8 +182,8 @@ const Calibration = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="rounded-lg overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b" 
-                    alt="Fluke Laboratory Calibrator" 
+                    src="/lovable-uploads/4d439193-e6be-4033-a1dc-d82fcb409144.png" 
+                    alt="Laboratory Equipment Calibration" 
                     className="w-full h-64 object-cover"
                   />
                 </div>
@@ -192,6 +198,7 @@ const Calibration = () => {
                     <li>Analytical balances and scales</li>
                     <li>Blood analyzers and gas analyzers</li>
                     <li>Temperature-controlled equipment (incubators, refrigerators)</li>
+                    <li>Pipettes and volumetric instruments</li>
                   </ul>
                 </div>
               </div>
@@ -200,7 +207,7 @@ const Calibration = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="rounded-lg overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1579154341098-e4e158cc7f50" 
+                    src="/lovable-uploads/469bc209-7388-4a64-924f-685f90017724.png" 
                     alt="Fluke Therapeutic Equipment Calibrator" 
                     className="w-full h-64 object-cover"
                   />
@@ -216,6 +223,7 @@ const Calibration = () => {
                     <li>Ventilators and respiratory equipment</li>
                     <li>Electrosurgical units</li>
                     <li>Physical therapy equipment</li>
+                    <li>Process calibration instruments</li>
                   </ul>
                 </div>
               </div>
@@ -243,13 +251,99 @@ const Calibration = () => {
                   <CardTitle>{service.title}</CardTitle>
                   <CardDescription className="mt-2">{service.description}</CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="space-y-4">
+                  <div className="h-48 overflow-hidden rounded-md">
+                    <img 
+                      src={service.image} 
+                      alt={`${service.title} Calibration`} 
+                      className="w-full h-full object-cover transition-transform hover:scale-105"
+                    />
+                  </div>
                   <Button variant="outline" className="w-full" asChild>
                     <Link to="/contact">Request Service</Link>
                   </Button>
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Clinical Validation Section */}
+      <section className="py-12 px-6 bg-[#f0f5ff]">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="rounded-lg overflow-hidden">
+                <img 
+                  src="/lovable-uploads/469bc209-7388-4a64-924f-685f90017724.png"
+                  alt="Process Calibration" 
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden">
+                <img 
+                  src="/lovable-uploads/09cf9294-1f8f-4e40-aade-ab0ee2c8fe16.png"
+                  alt="Medical Equipment Calibration" 
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden">
+                <img 
+                  src="/lovable-uploads/e953b46b-2063-42d5-8fef-bbdc08b8b875.png"
+                  alt="Patient Monitor Calibration" 
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden">
+                <img 
+                  src="/lovable-uploads/4d439193-e6be-4033-a1dc-d82fcb409144.png"
+                  alt="Laboratory Equipment Calibration" 
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold mb-6">Fluke Biomedical Certification</h2>
+              <p className="text-lg mb-4">
+                Our technicians are certified by Fluke Biomedical, the global leader in medical device calibration equipment. 
+                This ensures that all calibration procedures meet the highest standards in the industry.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <div className="h-6 w-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p className="text-lg">NIST-traceable calibration equipment</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="h-6 w-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p className="text-lg">ISO 17025 accredited calibration laboratory</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="h-6 w-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p className="text-lg">Certified to calibrate all major brands of medical equipment</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="h-6 w-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p className="text-lg">Compliance with FDA, JCAHO, and other regulatory standards</p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
