@@ -2,28 +2,23 @@
 import React from "react";
 import { renderToString } from "react-dom/server";
 import App from "./App";
-import { HelmetProvider } from "react-helmet-async";
+// import { HelmetProvider } from "react-helmet-async";
 import { ThemeProvider } from "./components/theme/ThemeProvider";
 
 export async function render() {
-  const helmetContext: any = {};
   const appHtml = renderToString(
-    <HelmetProvider context={helmetContext}>
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
-    </HelmetProvider>
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   );
-
-  const { helmet } = helmetContext;
 
   return `
     <!DOCTYPE html>
     <html lang="en">
       <head>
-        ${helmet.title.toString()}
-        ${helmet.meta.toString()}
-        ${helmet.link.toString()}
+        <title>Biomedical Equipment</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
       </head>
       <body>
         <div id="root">${appHtml}</div>
