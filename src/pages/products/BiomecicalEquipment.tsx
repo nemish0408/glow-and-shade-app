@@ -22,13 +22,13 @@ const BiomecicalEquipment = () => {
           selectedProduct={selectedProduct}
         />
         
-        <div className="flex-1 flex flex-col">
-          <header className="h-12 flex items-center border-b bg-background">
+        <div className="flex-1 flex flex-col ml-0">
+          <header className="h-12 flex items-center border-b bg-background sticky top-0 z-10">
             <SidebarTrigger className="ml-4" />
             <h1 className="ml-4 text-lg font-semibold">Refurbished Biomedical Equipment</h1>
           </header>
 
-          <main className="flex-1 overflow-y-auto">
+          <main className="flex-1 overflow-y-auto p-0">
             {selectedProduct ? (
               <ProductDetails 
                 product={selectedProduct} 

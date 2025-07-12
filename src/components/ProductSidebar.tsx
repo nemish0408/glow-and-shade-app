@@ -46,8 +46,8 @@ export function ProductSidebar({ onProductSelect, selectedProduct }: ProductSide
   };
 
   return (
-    <Sidebar className={collapsed ? "w-14" : "w-80"}>
-      <SidebarContent className="overflow-y-auto">
+    <Sidebar className={`${collapsed ? "w-14" : "w-80"} bg-muted/50 border-r`}>
+      <SidebarContent className="overflow-y-auto bg-muted/50">
         {categories.map((category) => {
           const isExpanded = expandedCategories.includes(category.key);
           
