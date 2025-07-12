@@ -6,6 +6,7 @@ import { Microscope, Scissors, Settings, Handshake, Shield, Phone, Trophy, Chevr
 import { Link } from "react-router-dom";
 import { GoToTop } from "@/components/GoToTop";
 import { useEffect, useState } from "react";
+import { Products } from "@/config/Products";
 
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -228,57 +229,29 @@ const Index = () => {
           </div>
           <Carousel className="max-w-4xl mx-auto">
             <CarouselContent>
-              <CarouselItem>
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Medical Imaging Systems</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <img 
-                      src="https://images.unsplash.com/photo-1518770660439-4636190af475" 
-                      alt="Medical Equipment" 
-                      className="w-full h-64 object-cover rounded-md"
-                    />
-                    <p className="mt-4 text-muted-foreground">
-                      Advanced imaging solutions for accurate diagnostics
-                    </p>
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-              <CarouselItem>
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Surgical Instruments</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <img 
-                      src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7" 
-                      alt="Surgical Instruments" 
-                      className="w-full h-64 object-cover rounded-md"
-                    />
-                    <p className="mt-4 text-muted-foreground">
-                      Precision surgical instruments for healthcare professionals
-                    </p>
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-              <CarouselItem>
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Calibration Equipment</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <img 
-                      src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
-                      alt="Calibration Equipment" 
-                      className="w-full h-64 object-cover rounded-md"
-                    />
-                    <p className="mt-4 text-muted-foreground">
-                      Professional calibration tools for medical device maintenance
-                    </p>
-                  </CardContent>
-                </Card>
-              </CarouselItem>
+              {[
+                ...Products.refurbished.heartLung.slice(0, 2),
+                ...Products.refurbished.anesthesia.slice(0, 1),
+                ...Products.refurbished.laproscopy.slice(0, 1)
+              ].map((product) => (
+                <CarouselItem key={product.id}>
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>{product.make} {product.model}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <img 
+                        src={product.image} 
+                        alt={`${product.make} ${product.model}`} 
+                        className="w-full h-64 object-cover rounded-md"
+                      />
+                      <p className="mt-4 text-muted-foreground">
+                        {product.desc.substring(0, 100)}...
+                      </p>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
             </CarouselContent>
             <CarouselPrevious className="hidden md:flex" />
             <CarouselNext className="hidden md:flex" />
