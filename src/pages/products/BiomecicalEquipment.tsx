@@ -16,19 +16,19 @@ const BiomecicalEquipment = () => {
 
   return (
     <SidebarProvider>
-      <div className="min-h-screen flex w-full bg-background">
+      <div className="flex w-full bg-background" style={{ height: 'calc(100vh - 64px)' }}>
         <ProductSidebar 
           onProductSelect={handleProductSelect} 
           selectedProduct={selectedProduct}
         />
         
-        <div className="flex-1 flex flex-col ml-0">
-          <header className="h-12 flex items-center border-b bg-background sticky top-0 z-10">
+        <div className="flex-1 flex flex-col max-w-4xl">
+          <header className="h-12 flex items-center border-b bg-background">
             <SidebarTrigger className="ml-4" />
             <h1 className="ml-4 text-lg font-semibold">Refurbished Biomedical Equipment</h1>
           </header>
 
-          <main className="flex-1 overflow-y-auto p-0">
+          <main className="flex-1 overflow-y-auto">
             {selectedProduct ? (
               <ProductDetails 
                 product={selectedProduct} 
