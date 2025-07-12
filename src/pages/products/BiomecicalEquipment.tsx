@@ -15,15 +15,15 @@ const BiomecicalEquipment = () => {
   };
 
   return (
-    <div className="pt-16"> {/* Account for navbar height */}
+    <div className="w-full"> {/* Account for navbar height */}
       <SidebarProvider>
-        <div className="flex w-full bg-background h-[calc(100vh-4rem)]">
+        <div className="flex w-full bg-background">
           <ProductSidebar 
             onProductSelect={handleProductSelect} 
             selectedProduct={selectedProduct}
           />
           
-          <div className="flex-1 flex flex-col max-w-5xl">
+          <div className="flex-1 flex flex-col mix-w-5xl">
             <header className="h-12 flex items-center border-b bg-background">
               <SidebarTrigger className="ml-4" />
               <h1 className="ml-4 text-lg font-semibold">Refurbished Biomedical Equipment</h1>

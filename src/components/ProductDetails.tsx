@@ -17,11 +17,11 @@ export function ProductDetails({ product, category }: ProductDetailsProps) {
       </div>
 
       <Card>
-        <div className="aspect-video overflow-hidden rounded-t-lg">
+        <div className="overflow-hidden rounded-t-lg">
           <img 
             src={product.image} 
             alt={`${product.make} ${product.model}`}
-            className="w-full h-full object-cover"
+            className="w-[400px] mx-auto object-cover "
           />
         </div>
         <CardHeader>

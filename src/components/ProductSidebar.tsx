@@ -46,7 +46,7 @@ export function ProductSidebar({ onProductSelect, selectedProduct }: ProductSide
   };
 
   return (
-    <Sidebar className={`${collapsed ? "w-14" : "w-80"} bg-muted/50 border-r h-full`}>
+    <Sidebar className={`${collapsed ? "w-14" : "w-80"} bg-muted/50 border-r h-[calc(100vh-96px)] mt-24`}>
       <SidebarContent className="overflow-y-auto bg-muted/50 h-full">
         {categories.map((category) => {
           const isExpanded = expandedCategories.includes(category.key);
