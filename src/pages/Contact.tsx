@@ -1,4 +1,3 @@
-
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -9,9 +8,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Phone } from "lucide-react";
-import { useEffect, useState } from "react";
-
-const RECAPTCHA_SITE_KEY = "YOUR_RECAPTCHA_SITE_KEY"; // <-- Replace with your key
+import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -20,12 +18,6 @@ const formSchema = z.object({
   service: z.string().min(1, "Please select a service"),
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
-
-declare global {
-  interface Window {
-    grecaptcha?: any;
-  }
-}
 
 const Contact = () => {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -41,38 +33,49 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-  // Inject the Google reCAPTCHA v3 script
-  useEffect(() => {
-    if (window.grecaptcha) return;
-    const script = document.createElement("script");
-    script.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
-    script.async = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    }
-  }, []);
-
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     setLoading(true);
-    // Run reCAPTCHA
-    if (window.grecaptcha) {
-      try {
-        const token = await window.grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: "submit" });
-        if (token) {
-          // TODO: send token to backend to verify alongside the form data
-          // Simulate success toast for demo
-          toast.success("Message sent successfully!");
-          form.reset();
-        } else {
-          toast.error("reCAPTCHA verification failed. Please try again.");
-        }
-      } catch (e) {
-        toast.error("An error occurred with reCAPTCHA. Please try again.");
-      }
-    } else {
-      toast.error("reCAPTCHA not loaded. Please try again.");
+    
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      toast.error("Email service not configured. Please contact support.");
+      setLoading(false);
+      return;
     }
+
+    // Format current date and time
+    const now = new Date();
+    const time = now.toLocaleString('en-IN', { 
+      dateStyle: 'medium', 
+      timeStyle: 'short' 
+    });
+
+    try {
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          title: data.service,
+          name: data.name,
+          email: data.email,
+          phone_number: data.phone,
+          required_service: data.service,
+          message: data.message,
+          time: time,
+        },
+        publicKey
+      );
+      
+      toast.success("Message sent successfully!");
+      form.reset();
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      toast.error("Failed to send message. Please try again.");
+    }
+    
     setLoading(false);
   };
 
