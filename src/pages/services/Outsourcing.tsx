@@ -102,16 +102,24 @@ const Outsourcing = () => {
         return;
       }
 
+      // Format current date and time
+      const now = new Date();
+      const time = now.toLocaleString('en-IN', { 
+        dateStyle: 'medium', 
+        timeStyle: 'short' 
+      });
+
       await emailjs.send(
         serviceId,
         templateId,
         {
-          from_name: data.name,
-          from_email: data.email,
-          phone: data.phone,
-          organization: data.organization,
-          service: data.service,
+          title: data.service,
+          name: data.name,
+          email: data.email,
+          phone_number: data.phone,
+          required_service: data.service,
           message: data.message,
+          time: time,
         },
         publicKey
       );
