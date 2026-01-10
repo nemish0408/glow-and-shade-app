@@ -4,22 +4,23 @@ import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
 import { ProductSidebar } from '@/components/ProductSidebar';
 import { ProductDetails } from '@/components/ProductDetails';
 import { Products } from '@/config/Products';
+import { Product } from '@/lib/types';
 
 const BiomecicalEquipment = () => {
-  const [selectedProduct, setSelectedProduct] = useState<any>(null);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('');
 
-  const handleProductSelect = (product: any, category: string) => {
+  const handleProductSelect = (product: Product, category: string) => {
     setSelectedProduct(product);
     setSelectedCategory(category);
   };
 
   return (
-    <div className="w-full"> {/* Account for navbar height */}
+    <div className="flex flex-col flex-1">
       <SidebarProvider>
-        <div className="flex w-full bg-background">
-          <ProductSidebar 
-            onProductSelect={handleProductSelect} 
+        <div className="flex flex-1 bg-background">
+          <ProductSidebar
+            onProductSelect={handleProductSelect}
             selectedProduct={selectedProduct}
           />
           

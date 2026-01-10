@@ -12,10 +12,11 @@ import {
   useSidebar,
 } from '@/components/ui/sidebar';
 import { ChevronRight, ChevronDown } from 'lucide-react';
+import { Product } from '@/lib/types';
 
 interface ProductSidebarProps {
-  onProductSelect: (product: any, category: string) => void;
-  selectedProduct?: any;
+  onProductSelect: (product: Product, category: string) => void;
+  selectedProduct?: Product;
 }
 
 export function ProductSidebar({ onProductSelect, selectedProduct }: ProductSidebarProps) {
@@ -35,6 +36,7 @@ export function ProductSidebar({ onProductSelect, selectedProduct }: ProductSide
     { key: 'ecgMachines', label: 'ECG Machines', products: Products.refurbished.ecgMachines },
     { key: 'defibrillators', label: 'Defibrillators', products: Products.refurbished.defibrillators },
     { key: 'iabpMachine', label: 'IABP Machines', products: Products.refurbished.iabpMachine },
+    { key: 'surgicalAccessories', label: 'Surgical Accessories', products: Products.refurbished.surgicalAccessories },
   ];
 
   const toggleCategory = (categoryKey: string) => {
@@ -46,8 +48,8 @@ export function ProductSidebar({ onProductSelect, selectedProduct }: ProductSide
   };
 
   return (
-    <Sidebar className={`${collapsed ? "w-14" : "w-80"} bg-muted/50 border-r h-[calc(100vh-96px)] mt-24`}>
-      <SidebarContent className="overflow-y-auto bg-muted/50 h-full">
+    <Sidebar className={`${collapsed ? "w-14" : "w-80"} bg-muted/50 border-r mt-12`}>
+      <SidebarContent className="overflow-y-auto bg-muted/50">
         {categories.map((category) => {
           const isExpanded = expandedCategories.includes(category.key);
           
