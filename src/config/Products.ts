@@ -424,7 +424,48 @@ export const Products = {
                 "Compatible with 7 Fr and 8 Fr IAB catheters",
                 "Integrated safety features with alarms and diagnostics"
             ]
-        }]
+        }],
+        surgicalAccessories: [
+            {
+                id: 28,
+                make: "Ethicon",
+                model: "Sutures and Needles",
+                image: "/images/Refurbished/sutures.jpg",
+                desc: "A wide range of high-quality sutures and needles for various surgical procedures. Our products are designed for optimal performance and patient safety.",
+                points: [
+                    "Absorbable and non-absorbable materials",
+                    "Variety of needle sizes and shapes",
+                    "Sterile and individually packaged",
+                    "Excellent tensile strength and knot security"
+                ]
+            },
+            {
+                id: 29,
+                make: "3M",
+                model: "Surgical Drapes and Gowns",
+                image: "/images/Refurbished/drapes.jpg",
+                desc: "Comprehensive portfolio of surgical drapes and gowns to ensure a sterile environment in the operating room. Made from high-quality, fluid-resistant materials.",
+                points: [
+                    "Impervious to liquids and bacteria",
+                    "Breathable and comfortable for surgical staff",
+                    "Available in various sizes and configurations",
+                    "Meets industry standards for safety and performance"
+                ]
+            },
+            {
+                id: 30,
+                make: "Medtronic",
+                model: "Ligating Clips",
+                image: "/images/Refurbished/ligating-clips.jpg",
+                desc: "Reliable and secure ligating clips for vessel and tissue ligation. Designed for easy application and dependable performance.",
+                points: [
+                    "Made from high-grade titanium or polymer",
+                    "Available in various sizes",
+                    "Secure and reliable closure",
+                    "Easy to load and apply"
+                ]
+            }
+        ]
     },
     newProducts: {}
 }

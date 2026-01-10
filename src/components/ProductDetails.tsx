@@ -9,9 +9,10 @@ import { Label } from '@/components/ui/label';
 import { MessageSquare } from 'lucide-react';
 import { toast } from 'sonner';
 import emailjs from '@emailjs/browser';
+import { Product } from '@/lib/types';
 
 interface ProductDetailsProps {
-  product: any;
+  product: Product;
   category: string;
 }
 
